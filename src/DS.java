@@ -71,7 +71,8 @@ public class DS {
             } else {
                 System.err.println(sourceFile.getName() +" File not exists");
             }
-            sourceFile.delete();
+
+            sourceFile.delete(); // после обработки файла исходник удаляется
 
 
         } catch (Exception e) {
