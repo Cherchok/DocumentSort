@@ -11,7 +11,7 @@ import net.sourceforge.tess4j.TesseractException;
 public class DS {
     public static void main(String[] args) throws IOException  {
 
-        String sourceDir = "C:\\exmp\\ex2.pdf";
+        String sourceDir = "C:\\exmp\\ex1.pdf";
 
         // вытаскиваем текст из отсканированного PDF файла
         try {
