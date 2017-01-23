@@ -11,7 +11,8 @@ import net.sourceforge.tess4j.TesseractException;
 public class DS {
     public static void main(String[] args) throws IOException  {
 
-        String sourceDir = "C:\\exmp\\ex1.pdf";
+        String sourceDir = "C:\\exmp\\ex2.pdf";
+        String tempfiledir = "C:\\exmp\\temp\\";
 
         // вытаскиваем текст из отсканированного PDF файла
         try {
@@ -103,8 +104,11 @@ public class DS {
                 System.err.println(sourceFile.getName() +" File not exists");
             }
 
+            // после обработки файла исходник переносится во временное хранилище
+            sourceFile.renameTo(new File(tempfiledir, sourceFile.getName()));
+
             // после обработки файла исходник удаляется
-            sourceFile.delete();
+            //sourceFile.delete();
 
         } catch (Exception e) {
             e.printStackTrace();
