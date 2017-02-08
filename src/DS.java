@@ -41,6 +41,8 @@ class DS extends JFrame {
         String tempput = tempFilesDir.getCurrentDirectory().getAbsolutePath();
         String tempfiledir = tempput + "\\";
 
+        JOptionPane.showMessageDialog(null,"Пошла обработка файлов");
+
         // пошел перебор каждого отдельного файла из выбранных
         for(File file: fileslist){
 
